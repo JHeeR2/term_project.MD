@@ -1,0 +1,32 @@
+import requests
+r=requests.get('https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B5%AD%EC%82%AC_%EC%97%B0%ED%91%9C')
+r.encoding='utf-8'
+data=str(r.text)
+begin=data.find('3년 고구려가')
+end=data.find('1943년 카이로 선언 발표')
+end=end+len('1943년 카이로 선언 발표')
+d=data[begin:end]    
+d=d.replace('</a>','')
+d=d.replace('</li>','')
+d=d.replace('</ul>','')
+d=d.replace('<ul>','')
+d=d.replace('</td>','')
+d=d.replace('</tr>','')
+d=d.replace('<li>','')
+d=d.replace('<tr>','')
+d=d.replace('<td>','')
+
+d=d.replace('<td valign="top">','')
+d=d.replace('<td style="text-align:right;" valign="top">','')
+d=d.replace('<td style="text-align:center;" bgcolor="#ccccff" rowspan="11">','')
+k=d.split('\n')
+print(k[:250])
+#for x in k
+    #if 
+#print('이 프로그램에는 한국사 연표가 저장되어 있고, 년도를 입력하면 어떤 사건이 일어났는지 알려주는 프로그램 입니다. 3년 부터 1943년 사이의 연도를 입력해 주세요')
+#user=input('년도 입력:')
+#for i in k:
+#if user in k[i]:
+#print(k[i])
+#else:
+#해당 년도에 일어난 사건이 없거나, 입력할 때 숫자만 입력해야 하는 데 다른 문자가 같이 입력되었습니다.
