@@ -55,21 +55,23 @@ k.remove('1910년')
 k.remove('1920년')
 k.remove('1930년')
 k.remove('1940년')
-print('이 프로그램에는 한국사 연표가 저장되어 있고, 년도를 입력하면 어떤 사건이 일어났는지 알려주는 프로그램 입니다.3년 부터 1943년 사이의 연도를 검색할 수 있으며 [0000년]형식으로  입력해 주세요')
+print('이 프로그램에는 한국사 연표가 저장되어 있고, 년도를 입력하면 어떤 사건이 일어났는지 알려주는 프로그램 입니다.3년 부터 1943년 사이의 연도를 검색할 수 있으며 [0000년]형식으로  입력해 주세요 \n예)1592년')
 while True:
     user=input('년도 입력:')
     l= len(user)
     num=0
-    for i in k:
-        if user in i[0:l]:
-            print(i)
-            num+=1
-    if num==0:
-        print('해당 년도에 일어난 사건이 없거나 혹은 형식을 맞춰 입력하지 않았을 수도 있습니다.')
-    question=input('계속 검색하시겠습니까? 계속 검색을 원하면 "네"를 입력해주시고 그렇지 않으면 아무 문자를 눌러주세요.')
-    if question=='네':
-        continue
-    else:
+    if '년' not in user:
+        print('형식을 잘못 입력하셨습니다.')
+    else:    
+        for i in k:
+            if user == i[0:l]:
+                print(i)
+                num+=1
+        if num==0:    
+            print('해당 년도에 일어난 사건이 없습니다.')
+    question=input('계속 검색하시겠습니까? 계속 검색을 원하면 아무 키를 입력해주시고 그렇지 않으면 n을  눌러주세요.')
+    if question=='n':
         break
-print('이용해주셔서 감사합니다.')    
-
+    else:
+        continue
+print('이용해주셔서 감사합니다.')
