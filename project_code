@@ -31,7 +31,7 @@ while True:
                 num+=1
         if num==0:    
             print('해당 년도에 일어난 사건이 없습니다.')
-    question=input('계속 검색하시겠습니까? 계속 검색을 원하면 아무 키를 입력해주시고 그렇지 않으면 n을  눌러주세요.')
+    question=input('계속 검색하시겠습니까? 계속 검색을 원하면 n을  아무 키를 입력해주시고 그렇지 않으면 n을  눌러주세요.')
     if question=='n':
         break
     else:
