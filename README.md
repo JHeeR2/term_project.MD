@@ -1,4 +1,5 @@
 # term_project.MD
+최종 파일인 project_code.py에 대한 설명
 request와 encoding을 이용해 링크의 연표 데이터를 가져온다.
 데이터를 원하는 부분만 슬라이싱을 이용해 자르고 필요없는 분은 지운다.
 그 후 split을 이용해 데이터를 리스트 형식으로 저장한다.
