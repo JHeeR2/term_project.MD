@@ -38,11 +38,11 @@ while True:
     num1=0
     num2=0
     num3=0
-    if 'user'=='n':
+    if user=='n':
         break
-    if '년' not in user:
-            print('형식을 잘못 입력하셨습니다.')
-            continue
+    elif '년' not in user:
+        print('형식을 잘못 입력하셨습니다.')
+        continue
     else:    
         for i in data1:
             if user == i[0:l]:
